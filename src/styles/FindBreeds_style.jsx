@@ -34,11 +34,13 @@ export const FindBreedsContainer = styled.div `
         width: 15vw;
         height:5vh ;
         border-radius: 10px;
-        background: #FF9C39;
+        background: #ffbe0b;
         color: #FCFBFB;
         font-family:'Mochiy Pop One',sans-serif;
         font-size:12pt;
         text-align: center;
+        cursor: pointer;
+
 
     }
     
@@ -63,5 +65,32 @@ export const FindBreedsContainer = styled.div `
       font-weight: bold;
       font-size:16pt;
       text-align: center;
+    }
+
+    @media screen and (max-width: 768px) {
+        #container{
+        display: flex;
+        align-items: center;
+        flex-direction:column-reverse;
+        }
+
+        #selectinput{
+        background: #FCFBFB;
+        border-radius: 10px;
+        width: 80vw;
+        height: 6vh;
+        font-size:12pt;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        
+    }
+
+        button{
+            
+            margin-left: 22%;
+            width: 40vw;
+            border: none;
+            
+        }
     }
 `

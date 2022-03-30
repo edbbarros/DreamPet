@@ -42,6 +42,14 @@ export const NavbarContainer = styled.nav `
               
 
     }
+
+    @media screen and (max-width: 768px) {
+        #container{
+        display: flex;
+        align-items: center;
+        flex-direction:column-reverse;
+        }
+    }
     
 `;
 

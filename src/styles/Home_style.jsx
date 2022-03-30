@@ -31,4 +31,25 @@ export const HomeContainer = styled.div `
         width: 20vw;
         color: #FF9C39;
     }
+
+    
+    @media screen and (max-width: 768px) {
+        #container{
+        display: flex;
+        align-items: center;
+        flex-direction:column-reverse;
+        }
+
+        #text_title{
+            font-size: 35pt;
+            text-align: center;
+        }
+        #text_subtitle{
+            width: 100%;
+        }
+        #logo_page{
+            height: 40vh;
+            width: 50vw;
+        }
+    }
 `;
