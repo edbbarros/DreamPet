@@ -3,20 +3,13 @@ import {NavbarContainer} from "../styles/Navbar_style";
 import Icone from "../Icons/icone.svg";
 
 
-
 function Navbar(){
     const [isActive, setActive] = useState("false");
-    let showmenu = "nav_icon hidden";
 
     const handleToggle = () => {
         setActive(!isActive);
       };
-
-    function clickmenu(e){
-    showmenu="nav_icon hidden";
-    console.log(showmenu);
-    }
-    
+  
     return (
 
         <NavbarContainer>

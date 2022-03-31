@@ -75,6 +75,7 @@ export const NavbarContainer = styled.nav `
             height: 2px;
             background-color: white;
             transition: 0.5s ;
+            
         }
         .black{
             background-color: black;
