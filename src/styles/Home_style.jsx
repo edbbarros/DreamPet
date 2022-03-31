@@ -2,13 +2,12 @@ import styled from "styled-components";
 
 export const HomeContainer = styled.div `
     #container{
-        
-        margin-left: 5%;
         width: 90%;
         height: 80vh;
         display: flex;
         justify-content: center;
         align-items: center;
+       
    
   }
   #text_title{
@@ -50,6 +49,7 @@ export const HomeContainer = styled.div `
         #logo_page{
             height: 40vh;
             width: 50vw;
+            
         }
     }
 `;

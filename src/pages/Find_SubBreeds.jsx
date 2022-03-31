@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
-import {FindBreedsContainer} from "../styles/FindBreeds_style";
+import {FindSubBreedsContainer} from "../styles/FindSubBreeds_style";
 
-class Breeds extends Component {
+class SubBreeds extends Component {
 
   constructor() {
       super();
@@ -14,9 +14,9 @@ class Breeds extends Component {
     }
 
 
-      GetImage = () => { 
+      GetImageSubBreedDog= () => { 
         const {SelectInput} = this.state;
-        axios.get(`https://dog.ceo/api/breed/${SelectInput}/images/random`)
+        axios.get(`https://dog.ceo/api/breed/hound/${SelectInput}/images/random`)
           .then(
             response => {
               this.setState({
@@ -28,10 +28,10 @@ class Breeds extends Component {
           .catch(err => console.log(err))
       };
 
-      getBreedDog = () => {
+      getSubBreedDog = () => {
           const { BreedDog } = this.state;
 
-          axios.get("https://dog.ceo/api/breeds/list")
+          axios.get("https://dog.ceo/api/breed/hound/list")
           .then(response => {
             this.setState({
               BreedDog: BreedDog.concat(response.data.message)
@@ -47,14 +47,14 @@ class Breeds extends Component {
     }
 
     componentDidMount() {
-        this.getBreedDog();
+        this.getSubBreedDog();
     }
       render() {
 
         const {BreedDog, ImageUrl, SelectInput} = this.state;
 
         return(
-          <FindBreedsContainer>
+          <FindSubBreedsContainer>
             <div id="container">
           <div id="button_">
           <form>
@@ -71,18 +71,18 @@ class Breeds extends Component {
                 </form> 
                 
                   
-                <button type="submit" disabled={!SelectInput}  onClick={this.GetImage}>Enviar</button>
+                <button type="submit" disabled={!SelectInput}  onClick={this.GetImageSubBreedDog}>Enviar</button>
                 </div>
 
             <div id="img">
                     <img src={ImageUrl}/>
-                    <p className="text_breeds"> Raça: {SelectInput} </p>
+                    <p className="text_breeds"> Sub-Raça: {SelectInput} </p>
                 </div>
 
                 </div>
-          </FindBreedsContainer>
+          </FindSubBreedsContainer>
         )
       }
     }
 
-export default Breeds;
+export default SubBreeds;
