@@ -1,6 +1,4 @@
 <h1 align="center">
-  <img src="src/icons/icone.svg" width="150" height="50">
-  <br>
   DreamPet
 </h1>
 
