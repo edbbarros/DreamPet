@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const FindBreedsContainer = styled.div `
+export const FindBreedsContainer = styled.div`
     #container{
         
         margin-left: 5%;
